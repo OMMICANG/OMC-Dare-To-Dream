@@ -40,7 +40,7 @@ body {
     z-index: 1;
     /* margin-left: 35%; */
     justify-content: center;
-    overflow: hidden;
+    overflow: visible;
     
     }
     
