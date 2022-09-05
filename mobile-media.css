@@ -1,0 +1,151 @@
+@media screen and (max-width: 700px) {
+    .text {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        min-width: 50vw;
+        font-size: .7rem;
+        /* border: 1px solid #fff; */
+        position: fixed;
+    }
+    .caps {
+        font-size: 3rem;
+        font-family: serif;
+        font-weight: 1000;
+    }
+    
+    /* .box-1 {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid red;
+        min-width: 25vw;
+        min-height: 25vh;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+    }
+    
+    .box-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 25%;
+        min-width: 25%;
+        border: 1px solid green;
+        position: fixed;
+    } */
+    
+    .always {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid #fff; */
+        margin-left: 6.5rem;
+        min-height: 10%;
+        min-width: 1%;
+        margin-top: -3.5rem;
+        position: fixed;
+    }
+    
+    .dare {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid #fff; */
+        margin-top: 1.5rem;
+        margin-left: -7rem;
+        /* position: fixed; */
+    } 
+    
+    .to {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        min-height: 5%;
+        min-width: 1%;
+        align-items: center;
+        /* border: 1px solid #fff; */
+        margin-top: -5.7rem;
+        margin-left: 9rem;
+        position: fixed;
+    }
+    
+    .dream {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        min-height: 5%;
+        min-width: 5%;
+        align-items: center;
+        /* border: 1px solid #fff; */
+        margin-top: 1.3rem;
+        margin-left: 13rem;
+        position: fixed;
+    }
+    
+    .fas {
+        display: flex;
+        /* border: 1px solid #fff; */
+        position: fixed;
+        font-size: 1rem;
+    
+    }
+    .fa {
+        display: inline;
+        position: fixed;
+        /* border: 1px solid #fff; */
+        font-size: 1rem;
+    
+    }
+    .fa-paper-plane {
+        font-weight: 900;
+       margin-top: 0rem;
+       margin-right: 4.5rem;
+    }
+    
+    .fa-route {
+        font-weight: 700;
+        margin-top: 2rem;
+       margin-right: 6.3rem;
+    
+    }
+    
+    .To {
+       margin-top: -1rem;
+       margin-right: 14rem;
+       transform: rotate(25deg);
+    }
+    
+    .after {
+       margin-top: -6rem;
+       margin-right: 10rem;
+       transform: rotate(75deg);
+    }
+    
+    .land {
+        margin-top: 13rem;
+        margin-right: -9.3rem;
+    }
+    
+    .p-landing{
+        font-size: 1rem;
+        margin-top: 13.4rem;
+        margin-left: -5rem;
+        transform: rotate(-180deg);
+        
+    }
+
+    .ommicang {
+        display: flex;
+        position: fixed;
+        font-weight: 500;
+        font-size: .7rem;
+        margin-top: 13.4rem;
+    }
+    
+}

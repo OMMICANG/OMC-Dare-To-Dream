@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* DarkMode style */
+
+ :root {
+    --primary-color: #fff;
+    --secondary-color: rgba(00, 00, 00, 0.5);
+    --border-primary: rgba(0, 0, 0, 0.9);
+    --top-headerCol:  rgba(44, 60, 92, 1);
+    }
+    
+    .dark-mode {
+    --primary-color: #988eee;
+    --secondary-color: #fff;
+    --border-primary: rgba(179, 0, 0, 0.9);
+    --top-headerCol: rgba(50, 50, 50, 1);
+    }
+    
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    color: var(--primary-color)
+}
+
+/* Timer popUp Starts Here */
+
+#popUp {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 25%;
+    height: 7%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    /* margin-left: 35%; */
+    justify-content: center;
+    overflow: hidden;
+    
+    }
+    
+    #Yes {
+    margin-top: 1.3rem;
+    border: 0.5px solid;
+    border-radius: 20%;
+    cursor: pointer;
+    margin-left: -13rem;
+    padding: 2px;
+    }
+    
+    #No {
+    margin-top: 1.3rem;
+    border: 0.5px solid;
+    border-radius: 20%;
+    cursor: pointer;
+    padding: 2px;
+    
+    }
+    
+    #Yes:hover, #No:hover {
+    background-color: var(--top-headerCol) ;
+    color: var(--border-primary);
+    }
+    
+    /* Timer popUp Ends Here */
+
+ /* Toggle Button Starts Here */
+
+ #toggle {
+    display: none;
+}
+
+#button {
+    display: flex;
+    width: 50px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    margin-top: -35rem;
+    left: 35%;
+}
+
+#button::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f186" ;
+    /* Add in the image. You could also add an icon by the using the icon's unicode (sites like fontawesome.com provide this). */
+width: 25px;
+height: 25px;
+/* Making the icon slightly taller than the button container. */
+background-color: #e03c3c;
+color: rgba(0, 0, 50, 0.8);
+border: 2px solid #fff;
+border-radius: 50%;
+box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+position: absolute;
+top: -5px;
+/* Since the button has a height of 35px and the ::after has 40px, we offset the difference by pushing it up by 5px to center this element vertically. */
+left: 0;
+display: grid;
+/* Used for centering the icon image in the middle in conjunction with place content center. */
+place-content: center;
+line-height: 0;
+/*By default this will have a line height. This means that the image will not be perfectly centered by using the properties above. To make sure we can center this image in the middle, we make the line height 0. */
+transition: background-color 1.5s,
+    transform 1.3s ease-in; /* check to see if image transformation time can be altered*/
+}
+
+#toggle:checked+#button::after {
+content: url('./Images/moon-svgrepo-com.svg');
+/* Switching the images when clicked. */
+background-color: #1f257f;
+font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f185" ; 
+  color: rgba(250, 150, 50, 150.9);
+transform: translateX(20px) rotate(360deg);
+transition: all 2s ease-in-out;
+/* Since the width of the button is 90px and the pseudo element is 40px we translate by a number that adds up to 90. So we translate to the right by 50px ( 40 + 50 = 90 width of the button). We also rotate this element by 360 degrees. */
+}
+
+  /* Toggle Button Ends Here */
+
+.back-Image-Container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./Images/OMClogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .85);
+    text-align: center;
+    position: fixed;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    min-width: 50vw;
+    font-size: 1.3rem;
+    /* border: 1px solid #fff; */
+    position: fixed;
+}
+
+@keyframes animate{
+    0% {
+        background-position: 0%; 
+    }
+
+   100% {
+        background-position: 400%; 
+    }
+}
+
+
+.caps {
+    font-size: 6rem;
+    font-family: serif;
+    font-weight: 1000;
+}
+
+
+.always {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #fff; */
+    margin-right: 17rem;
+    min-height: 10%;
+    min-width: 1%;
+    margin-top: -4rem;
+    margin-bottom: -1rem;
+    position: fixed;
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate  10s linear infinite;
+}
+
+.dare {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #fff; */
+    margin-top:4.9rem;
+    margin-left: -10rem;
+    /* position: fixed; */
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate  10s linear infinite;
+} 
+
+.to {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 5%;
+    min-width: 1%;
+    align-items: center;
+    /* border: 1px solid #fff; */
+    margin-top: -6.5rem;
+    margin-left: 13rem;
+    margin-bottom: -3rem;
+    position: fixed;
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate  10s linear infinite;
+}
+
+.dream {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 5%;
+    min-width: 5%;
+    align-items: center;
+    /* border: 1px solid #fff; */
+    margin-top: 4.3rem;
+    margin-left: 21rem;
+    position: fixed;
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate  10s linear infinite;
+}
+
+.fas {
+    display: flex;
+    /* border: 1px solid #fff; */
+    position: fixed;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate  1s linear infinite;
+}
+.fa {
+    display: inline;
+    position: fixed;
+    /* border: 1px solid #fff; */
+    font-size: 2rem;
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate  5s linear infinite;
+}
+.fa-paper-plane {
+    font-weight: 900;
+   margin-top: -1rem;
+   margin-right: 8rem;
+}
+
+.fa-route {
+    font-weight: 700;
+    margin-top: 2rem;
+   margin-right: 11rem;
+
+}
+
+.To {
+   margin-top: -2rem;
+   margin-right: 20rem;
+   transform: rotate(35deg);
+}
+
+.after {
+   margin-top: -10rem;
+   margin-right: 17rem;
+   transform: rotate(75deg);
+}
+
+.land {
+    margin-top: 19.5rem;
+    margin-right: -16rem;
+}
+
+.p-landing{
+    font-size: 1.5rem;
+    margin-top: 20.5rem;
+    margin-right: -12rem;
+    transform: rotate(-180deg);
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate  10s linear infinite;
+}
+
+.ommicang {
+    display: flex;
+    position: fixed;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 20.4rem;
+     background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate  4s linear infinite;
+}
