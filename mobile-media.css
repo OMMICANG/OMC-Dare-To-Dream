@@ -1,4 +1,43 @@
 @media screen and (max-width: 700px) {
+
+    #popUp {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 55%;
+        height: 6.5%;
+        font-size: smaller;
+        background-color: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        justify-content: center;
+        overflow: hidden;
+        
+      }
+      
+      #Yes {
+        margin-top: 1.3rem;
+        border: 0.5px solid;
+        border-radius: 20%;
+        cursor: pointer;
+        margin-left: -11.5rem;
+        padding: 1px;
+      }
+      
+      #No {
+        margin-top: 1.3rem;
+        border: 0.5px solid;
+        border-radius: 20%;
+        cursor: pointer;
+        padding: 1px;
+      }
+      
+      #Yes:hover, #No:hover {
+        background-color: var(--top-headerCol) ;
+        color: var(--border-primary);
+      }
+      
+      /* Timer popUp Ends Here */
+
     .text {
         display: flex;
         flex-direction: row;
@@ -13,7 +52,7 @@
     .caps {
         font-size: 3rem;
         font-family: serif;
-        font-weight: 1000;
+        font-weight: 500;
     }
     
     /* .box-1 {
@@ -128,13 +167,13 @@
     }
     
     .land {
-        margin-top: 13rem;
+        margin-top: 11rem;
         margin-right: -9.3rem;
     }
     
     .p-landing{
         font-size: 1rem;
-        margin-top: 13.4rem;
+        margin-top: 11.4rem;
         margin-left: -5rem;
         transform: rotate(-180deg);
         
@@ -145,7 +184,7 @@
         position: fixed;
         font-weight: 500;
         font-size: .7rem;
-        margin-top: 13.4rem;
+        margin-top: 11.4rem;
     }
     
 }
