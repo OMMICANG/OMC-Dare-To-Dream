@@ -7,14 +7,14 @@
  /* DarkMode style */
 
  :root {
-    --primary-color: #fff;
+    --primary-color: linear-gradient(to bottom, #2e2d31 0%, #382a02 100%);
     --secondary-color: rgba(00, 00, 00, 0.5);
     --border-primary: rgba(0, 0, 0, 0.9);
     --top-headerCol:  rgba(44, 60, 92, 1);
     }
     
     .dark-mode {
-    --primary-color: #988eee;
+        --primary-color: #000;
     --secondary-color: #fff;
     --border-primary: rgba(179, 0, 0, 0.9);
     --top-headerCol: rgba(50, 50, 50, 1);
@@ -24,8 +24,8 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-color: #000;
-    color: var(--primary-color)
+    background: var(--primary-color);
+    color: #fff;
 }
 
 /* Timer popUp Starts Here */
@@ -40,7 +40,7 @@ body {
     z-index: 1;
     /* margin-left: 35%; */
     justify-content: center;
-    overflow: visible;
+    overflow: hidden;
     
     }
     
@@ -149,7 +149,7 @@ transition: all 2s ease-in-out;
     min-width: 100vw;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, .85);
+    background-color: rgba(0, 0, 0, .5);
     text-align: center;
     position: fixed;
 }
